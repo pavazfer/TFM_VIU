@@ -9,6 +9,9 @@ const LoginScreen = ({ navigation }) => {
   const handleLogin = () => {
     console.log('Correo:', correo);
     console.log('Contraseña:', contrasena);
+
+    // comprobaciones de login
+    navigation.navigate('Index');
   };
 
   return (
