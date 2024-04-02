@@ -1,13 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Menu from '../components/Menu';
 
-const ConfiguracionScreen = () => {
+const HistorialScreen = () => {
   return (
     <View style={styles.container}>
-      <Menu/>
-      <Text>Configuración</Text>
-      {/* Contenido de la pantalla Configuración */}
+      <Text style={styles.subtitle}> --- Próximamente ---</Text>
     </View>
   );
 };
@@ -18,9 +15,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  subtitle: {
+    fontSize: 16,
+    color: 'gray',
+  },
 });
 
-export default ConfiguracionScreen;
-
-
-
+export default HistorialScreen;

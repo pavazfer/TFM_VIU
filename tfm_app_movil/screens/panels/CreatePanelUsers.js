@@ -1,13 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Menu from '../components/Menu';
 
-const IndexScreen = () => {
+const CreatePanelUsersScreen = () => {
   return (
     <View style={styles.container}>
-      <Menu /> 
-      <Text>Pantalla de Inicio</Text>
-      {/* Aquí puedes agregar el contenido de tu pantalla de inicio */}
+      <Text style={styles.subtitle}> --- Próximamente ---</Text>
     </View>
   );
 };
@@ -18,6 +15,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  subtitle: {
+    fontSize: 16,
+    color: 'gray',
+  },
 });
 
-export default IndexScreen;
+export default CreatePanelUsersScreen;
