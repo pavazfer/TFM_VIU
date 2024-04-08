@@ -3,11 +3,14 @@ import { View, Text, StyleSheet, SafeAreaView, Pressable, ScrollView } from 'rea
 import { Ionicons } from '@expo/vector-icons';
 
 const PanelUsersScreen = ({ route, navigation }) => {
+
+  const { panelDetails } = route.params;
+
   // Datos ficticios de usuarios del panel
   const panelUsers = [
-    { id: 1, name: 'Usuario 1', email: 'usuario1@example.com', userType: 'Admin' },
-    { id: 2, name: 'Usuario 2', email: 'usuario2@example.com', userType: 'Normal' },
-    { id: 3, name: 'Usuario 3', email: 'usuario3@example.com', userType: 'Normal' },
+    { id: 1, name: 'tfm', email: 'tfm@tfm.com', userType: 'Admin' },
+    { id: 2, name: 'Usuario ejemplo', email: 'usuarioe@example.com', userType: 'Normal' },
+    { id: 3, name: 'New User', email: 'newuser@example.com', userType: 'Normal' },
     // Más usuarios aquí...
   ];
 

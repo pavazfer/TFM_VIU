@@ -1,7 +1,9 @@
 import React from 'react';
 import { View, Text, TextInput, Pressable, StyleSheet, SafeAreaView } from 'react-native';
 
-const EditUserScreen = () => {
+const EditUserScreen = ({ route }) => {
+  const { user } = route.params;
+
   const handleSaveChanges = () => {
     // Lógica para guardar los cambios del perfil del usuario...
   };
@@ -21,6 +23,7 @@ const EditUserScreen = () => {
           onChangeText={(text) => {
             // Lógica para actualizar el nombre de usuario
           }}
+          value={user.name}
         />
         <TextInput
           placeholder="Correo electrónico"
@@ -29,6 +32,7 @@ const EditUserScreen = () => {
           onChangeText={(text) => {
             // Lógica para actualizar el correo electrónico
           }}
+          value={user.email}
         />
         <Pressable onPress={handleSaveChanges} style={styles.button}>
           <Text style={styles.buttonText}>Guardar Cambios</Text>

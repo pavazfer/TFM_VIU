@@ -5,14 +5,14 @@ import { Ionicons } from '@expo/vector-icons'; // Importar Ionicons
 const UserDetailsScreen = ({ navigation }) => {
   const user = {
     id: 1,
-    name: 'Usuario Ejemplo',
-    email: 'usuario@example.com',
+    name: 'tfm',
+    email: 'tfm@tfm.com',
     // Otros detalles del usuario...
   };
 
   const handleEditProfile = () => {
     // Navegar a la pantalla de edición del perfil
-    navigation.navigate('EditUser');
+    navigation.navigate('EditUser', { user });
   };
 
   const handleDeleteAccount = () => {

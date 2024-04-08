@@ -2,7 +2,9 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-const InfoScreen = () => {
+const InfoScreen = ({ route }) => {
+  const zone = route.params?.zone;
+
   return (
     <View style={styles.container}>
       <Ionicons name="notifications-off-outline" size={100} color="#696969" />

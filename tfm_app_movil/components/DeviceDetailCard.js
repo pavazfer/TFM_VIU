@@ -7,9 +7,20 @@ const DeviceDetailCard = ({ device, icon, backgroundColor }) => {
     <View style={[styles.container, { backgroundColor: backgroundColor }]}>
       <Text style={styles.title}>{device.name}</Text>
       <View style={styles.content}>
-        <Ionicons name={icon.name} size={24} color={icon.color} />
-        <Text style={styles.value}>Data ID: {device.dataId}</Text>
-        <Text style={styles.value}>Device ID: {device.devId}</Text>
+        <View style={styles.row}>
+          <Ionicons name={icon.name} size={24} color={icon.color} />
+          <View style={styles.textContainer}>
+            <Text style={styles.label}>Data ID:</Text>
+            <Text style={styles.value}>{device.dataId}</Text>
+          </View>
+        </View>
+        <View style={styles.row}>
+          <Ionicons name={icon.name} size={24} color={icon.color} />
+          <View style={styles.textContainer}>
+            <Text style={styles.label}>Device ID:</Text>
+            <Text style={styles.value}>{device.devId}</Text>
+          </View>
+        </View>
       </View>
     </View>
   );
@@ -30,18 +41,26 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
   },
   content: {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+  },
+  row: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
   },
   title: {
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
   },
+  textContainer: {
+    marginLeft: 5,
+  },
+  label: {
+    fontWeight: 'bold',
+  },
   value: {
     fontSize: 16,
-    marginLeft: 5,
   },
 });
 

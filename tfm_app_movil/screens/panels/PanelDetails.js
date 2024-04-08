@@ -5,18 +5,10 @@ import { Ionicons } from '@expo/vector-icons';
 const PanelDetailsScreen = ({ navigation }) => {
   // Simulando los detalles del panel
   const panelDetails = {
-    name: 'Panel de Control 1',
-    lastDataUpdate: new Date('2024-03-18'), // Fecha simulada del último envío de datos
+    name: 'AACES',
+    lastDataUpdate: 20, 
   };
-
-  // Lógica para calcular la diferencia en días desde el último envío de datos
-  const calculateDaysDifference = () => {
-    const today = new Date();
-    const lastUpdate = panelDetails.lastDataUpdate;
-    const differenceInTime = today.getTime() - lastUpdate.getTime();
-    const differenceInDays = Math.floor(differenceInTime / (1000 * 3600 * 24));
-    return differenceInDays;
-  };
+  
 
   const handleDeletePanel = () => {
     Alert.alert(
@@ -42,12 +34,12 @@ const PanelDetailsScreen = ({ navigation }) => {
 
   const handleEditPanel = () => {
     // Navegar a la pantalla de edición del panel
-    navigation.navigate('EditPanel');
+    navigation.navigate('EditPanel', { panelDetails });
   };
 
   const handleViewUsers = () => {
     // Navegar a la pantalla de usuarios del panel
-    navigation.navigate('PanelUsers');
+    navigation.navigate('PanelUsers', { panelDetails });
   };
 
   return (
@@ -58,7 +50,7 @@ const PanelDetailsScreen = ({ navigation }) => {
         <Text style={styles.value}>{panelDetails.name}</Text>
         {/* Mostrar diferencia en días desde el último envío de datos */}
         <Text style={styles.label}>Días desde el último envío de datos:</Text>
-        <Text style={styles.value}>{calculateDaysDifference()}</Text>
+        <Text style={styles.value}>{panelDetails.lastDataUpdate}</Text>
       </View>
 
       {/* Botón para editar el panel */}

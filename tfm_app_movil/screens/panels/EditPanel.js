@@ -1,12 +1,14 @@
 import React from 'react';
 import { View, Text, TextInput, Pressable, StyleSheet, SafeAreaView } from 'react-native';
 
-const EditPanelScreen = () => {
+const EditPanelScreen = ({ route }) => {
+  const { panelDetails } = route.params;
+
   const handleEditPanel = () => {
     // Lógica para editar el panel...
   };
 
-  return (
+ return (
     <SafeAreaView style={styles.container}>
       <View style={styles.section}>
         
@@ -16,6 +18,7 @@ const EditPanelScreen = () => {
           onChangeText={(text) => {
             // Lógica para actualizar el nombre del panel
           }}
+          value={panelDetails.name} // Aquí estableces el valor inicial del TextInput
         />
         <TextInput
           placeholder="Diferencia en días"
@@ -24,6 +27,7 @@ const EditPanelScreen = () => {
           onChangeText={(text) => {
             // Lógica para actualizar la diferencia en días
           }}
+          value={panelDetails.lastDataUpdate.toString()} // Aquí estableces el valor inicial del TextInput
         />
         <Pressable onPress={handleEditPanel} style={styles.button}>
           <Text style={styles.buttonText}>Guardar Cambios</Text>

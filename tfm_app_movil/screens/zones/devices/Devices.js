@@ -9,24 +9,24 @@ const DeviceListScreen = ({ navigation, route }) => {
   const devices = [
     { 
       id: 1, 
-      name: 'Device 1', 
-      dataId: 'data_1', 
-      devId: 'dev_1', 
+      name: 'Farm01_sm', 
+      dataId: '6549d8fd81e98a187c2e153f', 
+      devId: 'AACESFarm01ThetaProbesm14560', 
       zoneId: 1 
     },
     { 
       id: 2, 
-      name: 'Device 2', 
-      dataId: 'data_2', 
-      devId: 'dev_2', 
+      name: 'Farm01_ts', 
+      dataId: '6549d8fd81e98a187c2e1540', 
+      devId: 'AACESFarm016507Ats31620', 
       zoneId: 1 
     },
     { 
       id: 3, 
-      name: 'Device 3', 
-      dataId: 'data_3', 
-      devId: 'dev_3', 
-      zoneId: 2 
+      name: 'Farm02_sm', 
+      dataId: '6549d8fe81e98a187c2e1541', 
+      devId: 'AACESFarm02ThetaProbesm16565', 
+      zoneId: 1 
     },
   ];
 
